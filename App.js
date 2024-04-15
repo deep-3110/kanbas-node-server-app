@@ -44,5 +44,10 @@ ModuleRoutes(app);
 CourseRoutes(app);
 AssignmentsRoutes(app)
 Lab5(app);
+<<<<<<< HEAD
 Hello(app);
 app.listen(4000);
+=======
+Hello(app)
+app.listen(process.env.PORT || 4000);
+>>>>>>> parent of 5733ff1 (first commit)
