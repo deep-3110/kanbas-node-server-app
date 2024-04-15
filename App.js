@@ -33,7 +33,6 @@ app.use(
   if (process.env.NODE_ENV !== "development") {
     sessionOptions.proxy = true;
     sessionOptions.cookie = {
-      domain:"kanbas-node-server-app-1-6u7n.onrender.com/",
       sameSite: "none",
       secure: true,
     };
