@@ -5,12 +5,12 @@ import Lab5 from "./Lab5.js";
 import CourseRoutes from "./Kanbas/courses/routes.js";
 import ModuleRoutes from "./Kanbas/modules/routes.js";
 import AssignmentsRoutes from './Kanbas/assignments/routes.js';
-
+import "dotenv/config";
 import mongoose from "mongoose";
 import session from "express-session";
 
 import UserRoutes from './Kanbas/Users/routes.js';
-const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/kanbas'
+const CONNECTION_STRING = "mongodb+srv://deepshah3110:OxZnLMdGyRSBJQ6F@cluster0.i9ixy3l.mongodb.net/kanbas"
 console.log(CONNECTION_STRING);
 mongoose.connect(CONNECTION_STRING);
 const app = express();
@@ -23,7 +23,7 @@ app.use(
 
 
    const sessionOptions = {
-    secret: process.env.SESSION_SECRET,
+    secret: "super session secret",
     resave: false,
     saveUninitialized: false,
   };
